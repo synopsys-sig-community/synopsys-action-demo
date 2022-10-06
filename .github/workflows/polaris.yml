@@ -32,7 +32,7 @@ jobs:
           synopsys_bridge_path: /tmp/synopsys-bridge
           bridge_download_url: ${{ env.MACOSX_BRIDGE_URL }}
 
-          polaris_serverUrl: ${{ secrets.POLARIS_URL }}
+          polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
           polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           polaris_application_name: "synopsys-action-demo"
           polaris_project_name: "synopsys-action-demo"
