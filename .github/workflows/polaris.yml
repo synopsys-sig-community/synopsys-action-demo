@@ -18,9 +18,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: [self-hosted]
 
-    env:
-      MACOSX_BRIDGE_URL: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-action/0.1.61/ci-package-0.1.61-macosx.zip"
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -37,4 +34,5 @@ jobs:
           polaris_application_name: "synopsys-action-demo"
           polaris_project_name: "synopsys-action-demo"
           polaris_assessment_types: '["SAST", "SCA"]'
-
+        env:
+          MACOSX_BRIDGE_URL: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-action/0.1.61/ci-package-0.1.61-macosx.zip"
