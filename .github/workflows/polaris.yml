@@ -37,3 +37,4 @@ jobs:
           polaris_application_name: "synopsys-action-demo"
           polaris_project_name: "synopsys-action-demo"
           polaris_assessment_types: '["SAST", "SCA"]'
+
