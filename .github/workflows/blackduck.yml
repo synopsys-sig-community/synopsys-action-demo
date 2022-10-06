@@ -32,6 +32,6 @@ jobs:
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_TOKEN }}
           # Work around for SIGINT-277
-          blackduck_install_directory: /Users/jcroall/.bridge/blackduck/8.0.0
+          blackduck_install_directory: /tmp/synopsys-bridge/blackduck/8.0.0
         env:
           MACOSX_BRIDGE_URL: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-action/0.1.61/ci-package-0.1.61-macosx.zip"
