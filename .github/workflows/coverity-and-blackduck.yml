@@ -37,8 +37,6 @@ jobs:
 
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_TOKEN }}
-          # Work around for SIGINT-277
-          blackduck_install_directory: /tmp/synopsys-bridge/blackduck/8.0.0
         env:
           DETECT_BLACKDUCK_RAPID_COMPARE_MODE: BOM_COMPARE_STRICT
           MACOSX_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-action/0.1.114-demo-only/ci-package-0.1.114-demo-only-macosx.zip"
