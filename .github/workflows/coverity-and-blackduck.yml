@@ -27,6 +27,7 @@ jobs:
         uses: synopsys-sig/synopsys-action@main
         with:
           bridge_download_url: ${{ env.MACOSX_BRIDGE_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
