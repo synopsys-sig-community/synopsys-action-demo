@@ -27,16 +27,19 @@ jobs:
         uses: synopsys-sig/synopsys-action@main
         with:
           bridge_download_url: ${{ env.MACOSX_BRIDGE_URL }}
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
           coverity_project_name: ${{ github.event.repository.name }}
           coverity_stream_name: ${{ github.event.repository.name }}
-
+          coverity_automation_prcomment: true
+          
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_TOKEN }}
           blackduck_scan_full: false
+          blackduck_automation_prcomment: true
         env:
           DETECT_BLACKDUCK_RAPID_COMPARE_MODE: BOM_COMPARE_STRICT
           MACOSX_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.229/synopsys-bridge-0.1.229-macosx.zip"
