@@ -21,12 +21,13 @@ jobs:
           polaris_assessment_types: "SCA,SAST"
           
           ### SCANNING: Optional fields
-          # polaris_application_name: ${{ github.event.repository.name }}
-          # polaris_project_name: ${{ github.event.repository.name }}
+          #polaris_application_name: ${{ github.event.repository.name }}
+          polaris_application_name: "polaris-pr-comments-demo-app"
+          polaris_project_name: ${{ github.event.repository.name }}
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
-          # polaris_prComment_enabled: true 
-          # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
+          polaris_prComment_enabled: true 
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
 
           ### SARIF report parameters
           #polaris_reports_sarif_create: true
